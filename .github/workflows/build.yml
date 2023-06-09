@@ -12,10 +12,9 @@ jobs:
 
     - name: Checkout
       uses: actions/checkout@v3
-      with:
-        github-server-url: http://10.200.162.14:9008
 
-    - uses: dorny/paths-filte@v2
+
+    - uses: dorny/paths-filter@v2
       id: filter
       with:
         base: ${{ github.ref }}
