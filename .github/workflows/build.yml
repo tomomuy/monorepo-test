@@ -1,4 +1,4 @@
-name: Build Exercise Service
+name: Build Service
 on: 
   push: 
     branches: [main]
@@ -18,7 +18,7 @@ jobs:
     - uses: dorny/paths-filte@v2
       id: filter
       with:
-        base: ${{ gitea.ref }}
+        base: ${{ github.ref }}
         filters: |
           wall:
             - wall/**
